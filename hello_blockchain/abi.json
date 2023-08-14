@@ -1,0 +1,74 @@
+{
+    "bytecode": "0xa11ceb0b060000000c01000c020c12031e20043e04054228076ad50108bf024006ff020a108903560adf03150cf4035f0dd30404000001010102010301040105000606000007080005080700030e040106010009000100000a020300020f0404000410060000011106080106031209030106040705070105010802020c08020001030305080207080101060c010800010b0301090002070b030109000900076d657373616765076163636f756e74056572726f72056576656e74067369676e657206737472696e67124d6573736167654368616e67654576656e740d4d657373616765486f6c64657206537472696e670b6765745f6d6573736167650b7365745f6d6573736167650c66726f6d5f6d6573736167650a746f5f6d657373616765156d6573736167655f6368616e67655f6576656e74730b4576656e7448616e646c65096e6f745f666f756e640a616464726573735f6f66106e65775f6576656e745f68616e646c650a656d69745f6576656e74d8221ad202d71302027adab3706f9e8731b76b870bc1a163b0922ac5d91a905f000000000000000000000000000000000000000000000000000000000000000103080000000000000000126170746f733a3a6d657461646174615f7631420100000000000000000b454e4f5f4d4553534147451b5468657265206973206e6f206d6573736167652070726573656e7400010b6765745f6d6573736167650101000002020b08020c08020102020008020d0b030108000001000101030c0a0029010404050707001102270b002b0110001402010104010105200e0011030c020a02290120040e0e000b010e00380012012d01051f0b022a010c040a041000140c030a040f010b030a01120038010b010b040f0015020100010100",
+    "abi": {
+      "address": "0xd8221ad202d71302027adab3706f9e8731b76b870bc1a163b0922ac5d91a905f",
+      "name": "message",
+      "friends": [],
+      "exposed_functions": [
+        {
+          "name": "get_message",
+          "visibility": "public",
+          "is_entry": false,
+          "is_view": true,
+          "generic_type_params": [],
+          "params": [
+            "address"
+          ],
+          "return": [
+            "0x1::string::String"
+          ]
+        },
+        {
+          "name": "set_message",
+          "visibility": "public",
+          "is_entry": true,
+          "is_view": false,
+          "generic_type_params": [],
+          "params": [
+            "signer",
+            "0x1::string::String"
+          ],
+          "return": []
+        }
+      ],
+      "structs": [
+        {
+          "name": "MessageChangeEvent",
+          "is_native": false,
+          "abilities": [
+            "drop",
+            "store"
+          ],
+          "generic_type_params": [],
+          "fields": [
+            {
+              "name": "from_message",
+              "type": "0x1::string::String"
+            },
+            {
+              "name": "to_message",
+              "type": "0x1::string::String"
+            }
+          ]
+        },
+        {
+          "name": "MessageHolder",
+          "is_native": false,
+          "abilities": [
+            "key"
+          ],
+          "generic_type_params": [],
+          "fields": [
+            {
+              "name": "message",
+              "type": "0x1::string::String"
+            },
+            {
+              "name": "message_change_events",
+              "type": "0x1::event::EventHandle<0xd8221ad202d71302027adab3706f9e8731b76b870bc1a163b0922ac5d91a905f::message::MessageChangeEvent>"
+            }
+          ]
+        }
+      ]
+    }
+  }
